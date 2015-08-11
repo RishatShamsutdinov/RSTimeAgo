@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>659C87B9-A52C-4D41-8D76-A91229D43E6A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RSTimeAgo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2112FE504B3A75F167D729F7195C034B4F0A590E</key>
+		<string>github.com:RishatShamsutdinov/RSTimeAgo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RSTimeAgo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2112FE504B3A75F167D729F7195C034B4F0A590E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:RishatShamsutdinov/RSTimeAgo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2112FE504B3A75F167D729F7195C034B4F0A590E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2112FE504B3A75F167D729F7195C034B4F0A590E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RSTimeAgo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

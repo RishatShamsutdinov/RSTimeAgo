@@ -73,7 +73,7 @@ static NSInteger _unitValueForSeconds(NSTimeInterval secondsAgo, RSTimeAgoUnit u
     if (self = [super init]) {
         _rawValue = (untilTimeInterval - sinceTimeInterval);
         _valueUnit = _timeAgoUnitForSeconds(_rawValue);
-        _unitValueForSeconds(_rawValue, _valueUnit);
+        _value = _unitValueForSeconds(_rawValue, _valueUnit);
     }
 
     return self;
