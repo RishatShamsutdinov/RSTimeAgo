@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDEA668F1B79DA76008671FB /* RSTimeAgo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FDEA668E1B79DA76008671FB /* RSTimeAgo.h */; };
+		FDEA66911B79DA76008671FB /* RSTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA66901B79DA76008671FB /* RSTimeAgo.m */; };
+		FDEA66971B79DA76008671FB /* libRSTimeAgo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEA668B1B79DA76008671FB /* libRSTimeAgo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDEA66981B79DA76008671FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDEA66831B79DA76008671FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDEA668A1B79DA76008671FB;
+			remoteInfo = RSTimeAgo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDEA66891B79DA76008671FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FDEA668F1B79DA76008671FB /* RSTimeAgo.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FDEA668B1B79DA76008671FB /* libRSTimeAgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSTimeAgo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEA668E1B79DA76008671FB /* RSTimeAgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSTimeAgo.h; sourceTree = "<group>"; };
+		FDEA66901B79DA76008671FB /* RSTimeAgo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSTimeAgo.m; sourceTree = "<group>"; };
+		FDEA66961B79DA76008671FB /* RSTimeAgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSTimeAgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEA669C1B79DA76008671FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDEA66881B79DA76008671FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEA66931B79DA76008671FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEA66971B79DA76008671FB /* libRSTimeAgo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDEA66821B79DA76008671FB = {
+			isa = PBXGroup;
+			children = (
+				FDEA668D1B79DA76008671FB /* RSTimeAgo */,
+				FDEA669A1B79DA76008671FB /* RSTimeAgoTests */,
+				FDEA668C1B79DA76008671FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDEA668C1B79DA76008671FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA668B1B79DA76008671FB /* libRSTimeAgo.a */,
+				FDEA66961B79DA76008671FB /* RSTimeAgoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDEA668D1B79DA76008671FB /* RSTimeAgo */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA668E1B79DA76008671FB /* RSTimeAgo.h */,
+				FDEA66901B79DA76008671FB /* RSTimeAgo.m */,
+			);
+			path = RSTimeAgo;
+			sourceTree = "<group>";
+		};
+		FDEA669A1B79DA76008671FB /* RSTimeAgoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA669B1B79DA76008671FB /* Supporting Files */,
+			);
+			path = RSTimeAgoTests;
+			sourceTree = "<group>";
+		};
+		FDEA669B1B79DA76008671FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA669C1B79DA76008671FB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDEA668A1B79DA76008671FB /* RSTimeAgo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEA669F1B79DA76008671FB /* Build configuration list for PBXNativeTarget "RSTimeAgo" */;
+			buildPhases = (
+				FDEA66871B79DA76008671FB /* Sources */,
+				FDEA66881B79DA76008671FB /* Frameworks */,
+				FDEA66891B79DA76008671FB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSTimeAgo;
+			productName = RSTimeAgo;
+			productReference = FDEA668B1B79DA76008671FB /* libRSTimeAgo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FDEA66951B79DA76008671FB /* RSTimeAgoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEA66A21B79DA76008671FB /* Build configuration list for PBXNativeTarget "RSTimeAgoTests" */;
+			buildPhases = (
+				FDEA66921B79DA76008671FB /* Sources */,
+				FDEA66931B79DA76008671FB /* Frameworks */,
+				FDEA66941B79DA76008671FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDEA66991B79DA76008671FB /* PBXTargetDependency */,
+			);
+			name = RSTimeAgoTests;
+			productName = RSTimeAgoTests;
+			productReference = FDEA66961B79DA76008671FB /* RSTimeAgoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDEA66831B79DA76008671FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = rishat;
+				TargetAttributes = {
+					FDEA668A1B79DA76008671FB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					FDEA66951B79DA76008671FB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = FDEA66861B79DA76008671FB /* Build configuration list for PBXProject "RSTimeAgo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FDEA66821B79DA76008671FB;
+			productRefGroup = FDEA668C1B79DA76008671FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDEA668A1B79DA76008671FB /* RSTimeAgo */,
+				FDEA66951B79DA76008671FB /* RSTimeAgoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDEA66941B79DA76008671FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDEA66871B79DA76008671FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEA66911B79DA76008671FB /* RSTimeAgo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDEA66921B79DA76008671FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDEA66991B79DA76008671FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDEA668A1B79DA76008671FB /* RSTimeAgo */;
+			targetProxy = FDEA66981B79DA76008671FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FDEA669D1B79DA76008671FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FDEA669E1B79DA76008671FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDEA66A01B79DA76008671FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FDEA66A11B79DA76008671FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FDEA66A31B79DA76008671FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RSTimeAgoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FDEA66A41B79DA76008671FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RSTimeAgoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDEA66861B79DA76008671FB /* Build configuration list for PBXProject "RSTimeAgo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEA669D1B79DA76008671FB /* Debug */,
+				FDEA669E1B79DA76008671FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDEA669F1B79DA76008671FB /* Build configuration list for PBXNativeTarget "RSTimeAgo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEA66A01B79DA76008671FB /* Debug */,
+				FDEA66A11B79DA76008671FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FDEA66A21B79DA76008671FB /* Build configuration list for PBXNativeTarget "RSTimeAgoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDEA66A31B79DA76008671FB /* Debug */,
+				FDEA66A41B79DA76008671FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDEA66831B79DA76008671FB /* Project object */;
+}
