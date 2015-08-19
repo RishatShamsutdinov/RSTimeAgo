@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD7DB3611B847A15009FFEE9 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7DB3601B847A15009FFEE9 /* Tests.m */; };
 		FDEA668F1B79DA76008671FB /* RSTimeAgo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FDEA668E1B79DA76008671FB /* RSTimeAgo.h */; };
 		FDEA66911B79DA76008671FB /* RSTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA66901B79DA76008671FB /* RSTimeAgo.m */; };
 		FDEA66971B79DA76008671FB /* libRSTimeAgo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEA668B1B79DA76008671FB /* libRSTimeAgo.a */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD7DB3601B847A15009FFEE9 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		FDEA668B1B79DA76008671FB /* libRSTimeAgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSTimeAgo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEA668E1B79DA76008671FB /* RSTimeAgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSTimeAgo.h; sourceTree = "<group>"; };
 		FDEA66901B79DA76008671FB /* RSTimeAgo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSTimeAgo.m; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEA669B1B79DA76008671FB /* Supporting Files */,
+				FD7DB3601B847A15009FFEE9 /* Tests.m */,
 			);
 			path = RSTimeAgoTests;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7DB3611B847A15009FFEE9 /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +366,7 @@
 				FDEA66A11B79DA76008671FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDEA66A21B79DA76008671FB /* Build configuration list for PBXNativeTarget "RSTimeAgoTests" */ = {
 			isa = XCConfigurationList;
@@ -370,6 +375,7 @@
 				FDEA66A41B79DA76008671FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "RSTimeAgo"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Util for time ago labels."
 
   s.description  = <<-DESC
-                   Util for time ago labels. Uses aproximated values for motnhs and years due performance reasons.
+                   Util for time ago labels. Uses ctime.
                    DESC
 
   s.homepage     = "https://github.com/RishatShamsutdinov/RSTimeAgo"

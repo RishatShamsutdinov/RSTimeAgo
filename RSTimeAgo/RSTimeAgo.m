@@ -18,12 +18,14 @@
 
 #import "RSTimeAgo.h"
 
+#import <time.h>
+
 #define RS_NUM_SEC_PER_MINUTE 60
 #define RS_NUM_SEC_PER_HOUR (RS_NUM_SEC_PER_MINUTE * 60)
 #define RS_NUM_SEC_PER_DAY (RS_NUM_SEC_PER_HOUR * 24)
 #define RS_NUM_SEC_PER_WEEK (RS_NUM_SEC_PER_DAY * 7)
-#define RS_NUM_SEC_PER_MONTH (RS_NUM_SEC_PER_DAY * 30)
-#define RS_NUM_SEC_PER_YEAR (RS_NUM_SEC_PER_DAY * 365)
+
+static uint const kMonthsPerYear = 12;
 
 @implementation RSTimeAgo
 
@@ -50,30 +52,64 @@
     return [[self alloc] initWithSinceTimeInterval:sinceTimeInterval untilTimeInterval:untilTimeInterval];
 }
 
-static RSTimeAgoUnit _timeAgoUnitForSeconds(NSTimeInterval secondsAgo) {
+static int _absMonthDiff(struct tm *sinceTmPtr, struct tm *untilTmPtr) {
+    struct tm sinceTm = *sinceTmPtr;
+    struct tm untilTm = *untilTmPtr;
+
+    int monthDiff = (untilTm.tm_mon - sinceTm.tm_mon);
+    int yearDiff = (untilTm.tm_year - sinceTm.tm_year);
+
+    return (monthDiff + yearDiff * kMonthsPerYear);
+}
+
+static RSTimeAgoUnit _timeAgoUnitForSeconds(NSTimeInterval sinceTimeInterval, NSTimeInterval untilTimeInterval,
+                                            struct tm *sinceTmPtr, struct tm *untilTmPtr)
+{
+    NSTimeInterval secondsAgo = (untilTimeInterval - sinceTimeInterval);
+
     if (secondsAgo < RS_NUM_SEC_PER_HOUR) {
         return RSTimeAgoUnitMinutes;
     } else if (secondsAgo < RS_NUM_SEC_PER_DAY) {
         return RSTimeAgoUnitHours;
     } else if (secondsAgo < RS_NUM_SEC_PER_WEEK) {
         return RSTimeAgoUnitDays;
-    } else if (secondsAgo < RS_NUM_SEC_PER_MONTH) {
+    }
+
+    time_t since = (typeof(since))sinceTimeInterval;
+    time_t until = (typeof(until))untilTimeInterval;
+
+    struct tm sinceTm, untilTm;
+
+    localtime_r(&since, &sinceTm);
+    localtime_r(&until, &untilTm);
+
+    int mDayDiff = (untilTm.tm_mday - sinceTm.tm_mday);
+    int absMonthDiff = _absMonthDiff(&sinceTm, &untilTm);
+
+    if (absMonthDiff == 0 || (mDayDiff < 0 && absMonthDiff == 1)) {
         return RSTimeAgoUnitWeeks;
-    } else if (secondsAgo < RS_NUM_SEC_PER_YEAR) {
+    }
+
+    *sinceTmPtr = sinceTm;
+    *untilTmPtr = untilTm;
+
+    if (absMonthDiff < kMonthsPerYear) {
         return RSTimeAgoUnitMonths;
     }
 
     return RSTimeAgoUnitYears;
 }
 
-static NSInteger _unitValueForSeconds(NSTimeInterval secondsAgo, RSTimeAgoUnit unit) {
+static NSInteger _unitValueForSeconds(NSTimeInterval secondsAgo, RSTimeAgoUnit unit,
+                                      struct tm *sinceTmPtr, struct tm *untilTmPtr)
+{
     switch (unit) {
         case RSTimeAgoUnitMinutes: return (NSInteger) (secondsAgo / RS_NUM_SEC_PER_MINUTE);
         case RSTimeAgoUnitHours: return (NSInteger) (secondsAgo / RS_NUM_SEC_PER_HOUR);
         case RSTimeAgoUnitDays: return (NSInteger) (secondsAgo / RS_NUM_SEC_PER_DAY);
         case RSTimeAgoUnitWeeks: return (NSInteger) (secondsAgo / RS_NUM_SEC_PER_WEEK);
-        case RSTimeAgoUnitMonths: return (NSInteger) (secondsAgo / RS_NUM_SEC_PER_MONTH);
-        case RSTimeAgoUnitYears: return (NSInteger) (secondsAgo / RS_NUM_SEC_PER_YEAR);
+        case RSTimeAgoUnitMonths: return (NSInteger) _absMonthDiff(sinceTmPtr, untilTmPtr);
+        case RSTimeAgoUnitYears: return (NSInteger) (_absMonthDiff(sinceTmPtr, untilTmPtr) / kMonthsPerYear);
     }
 }
 
@@ -82,8 +118,11 @@ static NSInteger _unitValueForSeconds(NSTimeInterval secondsAgo, RSTimeAgoUnit u
 {
     if (self = [super init]) {
         _rawValue = (untilTimeInterval - sinceTimeInterval);
-        _valueUnit = _timeAgoUnitForSeconds(_rawValue);
-        _value = _unitValueForSeconds(_rawValue, _valueUnit);
+
+        struct tm sinceTm, untilTm;
+
+        _valueUnit = _timeAgoUnitForSeconds(sinceTimeInterval, untilTimeInterval, &sinceTm, &untilTm);
+        _value = _unitValueForSeconds(_rawValue, _valueUnit, &sinceTm, &untilTm);
     }
 
     return self;
